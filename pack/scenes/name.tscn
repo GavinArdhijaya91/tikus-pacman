@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bexhw77t2x8ov"]
+
+[ext_resource type="Texture2D" uid="uid://dn5n35q1uw6no" path="res://Assets/Pacman/Pacman_03.png" id="1_yvi5u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82ere"]
+radius = 31.9061
+
+[sub_resource type="TileSet" id="TileSet_w8suc"]
+
+[node name="name" type="Node2D"]
+
+[node name="player" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_82ere")
+
+[node name="Pacman03" type="Sprite2D" parent="."]
+position = Vector2(-0.999998, 1)
+scale = Vector2(4.25, 4.48333)
+texture = ExtResource("1_yvi5u")
+flip_h = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1, 0)
+tile_set = SubResource("TileSet_w8suc")
+format = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = -0.838658
